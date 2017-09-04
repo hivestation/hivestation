@@ -1,5 +1,9 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>Welcome to Space Station 13!</h1>
+<h1>Welcome to HiveStation 13!</h1>
 
-<i>This server is running a /tg/station 13 Git build.</i>
+<i>We're running a fork of /tg/station.</i>
+
+<b><a href="https://discord.gg/xFV5Rr8">Join our Discord to keep up with development.</a></b>
+
+<h3>Please make sure to read the rules before playing, breaking them will net you a ban fairly quick.</h3>
