@@ -4,10 +4,10 @@
 //  -Cyberboss
 
 /datum/map_config
-    var/config_filename = "_maps/boxstation.json"
-    var/map_name = "Box Station"
-    var/map_path = "map_files/BoxStation"
-    var/map_file = "BoxStation.dmm"
+    var/config_filename = "_maps/pubbystation.json"
+    var/map_name = "PubbyStation"
+    var/map_path = "map_files/PubbyStation"
+    var/map_file = "pubbystation.dmm"
 
     var/minetype = "lavaland"
 
