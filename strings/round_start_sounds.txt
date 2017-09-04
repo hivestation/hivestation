@@ -1,4 +1,6 @@
-sound/ambience/title1.ogg
-sound/ambience/title2.ogg
-sound/ambience/title3.ogg
-sound/ambience/clown.ogg
+sound/lobby/cookn.ogg
+sound/lobby/fade.ogg
+sound/lobby/faded.ogg
+sound/lobby/solitude.ogg
+sound/lobby/stryman.ogg
+sound/lobby/suchawaste.ogg

@@ -13,24 +13,29 @@ Format:
 	disabled (disables the map)
 endmap
 
+map pubbystation
+	default
+        voteweight 5
+endmap
+
 map boxstation
+	disabled
 	#voteweight 1.5
 endmap
 
 map metastation
+	disabled
 	minplayers 25
 	#voteweight 0.5
 endmap
 
-map pubbystation
-	default
-endmap
-
 map omegastation
+	disabled
 	maxplayers 35
 endmap
 
 map deltastation
+	disabled
 	minplayers 50
 endmap
 
