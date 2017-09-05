@@ -181,7 +181,7 @@
 
 //fusion: a terrible idea that was fun to try. turns co2 and plasma into REALLY HOT oxygen and nitrogen. super exothermic lol
 /datum/gas_reaction/fusion
-	exclude = TRUE
+	exclude = FALSE
 	priority = 2
 	name = "Plasmic Fusion"
 	id = "fusion"
