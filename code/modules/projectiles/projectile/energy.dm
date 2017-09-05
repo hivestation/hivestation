@@ -18,7 +18,6 @@
 	stutter = 5
 	jitter = 20
 	hitsound = 'sound/weapons/taserhit.ogg'
-	range = 7
 
 /obj/item/projectile/energy/electrode/on_hit(atom/target, blocked = FALSE)
 	. = ..()
