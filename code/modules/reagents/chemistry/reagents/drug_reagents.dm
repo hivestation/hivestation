@@ -366,10 +366,12 @@
 	color = "#FFFFFF"
 	
 /datum/reagent/drug/megazine/on_mob_life(mob/living/M)
-	var/high_message = pick("You feel the world is slowing down around you.", "You feel more alive than you ever have before.", "You feel like nothing can stop you.")
+	var/high_message = pick("You feel like the world is slowing down around you.", "You feel more alive than you ever have before.", "You feel like nothing can stop you.")
 	if(prob(5))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
 	M.status_flags |= GOTTAGOREALLYFAST
+	M.set_drugginess(30)
+	M.adjustStaminaLoss(-2*REM, 0)
 	if(prob(5))
 		M.emote(pick("twitch", "shiver"))
 		..()
