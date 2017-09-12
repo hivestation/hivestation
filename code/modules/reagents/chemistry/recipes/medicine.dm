@@ -226,3 +226,10 @@
 	id = "corazone"
 	results = list("corazone" = 3)
 	required_reagents = list("phenol" = 2, "lithium" = 1)
+	
+/datum/chemical_reaction/dermaline
+	name = "Dermaline"
+	id = "dermaline"
+	result = "dermaline"
+	results = list("dermaline" = 3)
+	required_reagents = list("oxygen" = 1, "phosphorus" = 1, "kelotane" = 1)
