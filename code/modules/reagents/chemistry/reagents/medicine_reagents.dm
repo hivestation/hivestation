@@ -901,61 +901,61 @@
 	description = "Restores bruising. Overdose causes it instead."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	overdose_threshold = 30
+	//overdose_threshold = 30
 
 /datum/reagent/medicine/bicaridine/on_mob_life(mob/living/M)
 	M.adjustBruteLoss(-2*REM, 0)
 	..()
 	. = 1
-
+/*
 /datum/reagent/medicine/bicaridine/overdose_process(mob/living/M)
 	M.adjustBruteLoss(4*REM, 0)
 	..()
 	. = 1
-
+*/
 /datum/reagent/medicine/dexalin
 	name = "Dexalin"
 	id = "dexalin"
 	description = "Restores oxygen loss. Overdose causes it instead."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	overdose_threshold = 30
+	//overdose_threshold = 30
 
 /datum/reagent/medicine/dexalin/on_mob_life(mob/living/M)
 	M.adjustOxyLoss(-2*REM, 0)
 	..()
 	. = 1
-
+/*
 /datum/reagent/medicine/dexalin/overdose_process(mob/living/M)
 	M.adjustOxyLoss(4*REM, 0)
 	..()
 	. = 1
-
+*/
 /datum/reagent/medicine/kelotane
 	name = "Kelotane"
 	id = "kelotane"
 	description = "Restores fire damage. Overdose causes it instead."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	overdose_threshold = 30
+	//overdose_threshold = 30
 
 /datum/reagent/medicine/kelotane/on_mob_life(mob/living/M)
 	M.adjustFireLoss(-2*REM, 0)
 	..()
 	. = 1
-
+/*
 /datum/reagent/medicine/kelotane/overdose_process(mob/living/M)
 	M.adjustFireLoss(4*REM, 0)
 	..()
 	. = 1
-
+*/
 /datum/reagent/medicine/antitoxin
 	name = "Anti-Toxin"
 	id = "antitoxin"
 	description = "Heals toxin damage and removes toxins in the bloodstream. Overdose causes toxin damage."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	overdose_threshold = 30
+	//overdose_threshold = 30
 	taste_description = "a roll of gauze"
 
 /datum/reagent/medicine/antitoxin/on_mob_life(mob/living/M)
@@ -964,12 +964,12 @@
 		M.reagents.remove_reagent(R.id,1)
 	..()
 	. = 1
-
+/*
 /datum/reagent/medicine/antitoxin/overdose_process(mob/living/M)
 	M.adjustToxLoss(4*REM, 0) // End result is 2 toxin loss taken, because it heals 2 and then removes 4.
 	..()
 	. = 1
-
+*/
 /datum/reagent/medicine/inaprovaline
 	name = "Inaprovaline"
 	id = "inaprovaline"
@@ -988,7 +988,7 @@
 	description = "Has a high chance to heal all types of damage. Overdose instead causes it."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	overdose_threshold = 30
+	//overdose_threshold = 30
 	taste_description = "grossness"
 
 /datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/M)
@@ -999,7 +999,7 @@
 		M.adjustToxLoss(-1*REM, 0)
 		. = 1
 	..()
-
+/*
 /datum/reagent/medicine/tricordrazine/overdose_process(mob/living/M)
 	M.adjustToxLoss(2*REM, 0)
 	M.adjustOxyLoss(2*REM, 0)
@@ -1007,7 +1007,7 @@
 	M.adjustFireLoss(2*REM, 0)
 	..()
 	. = 1
-
+*/
 /datum/reagent/medicine/syndicate_nanites //Used exclusively by Syndicate medical cyborgs
 	name = "Restorative Nanites"
 	id = "syndicate_nanites"
@@ -1030,7 +1030,7 @@
 	id = "earthsblood"
 	description = "Ichor from an extremely powerful plant. Great for restoring wounds, but it's a little heavy on the brain."
 	color = rgb(255, 175, 0)
-	overdose_threshold = 25
+	//overdose_threshold = 25
 
 /datum/reagent/medicine/earthsblood/on_mob_life(mob/living/M)
 	M.adjustBruteLoss(-3 * REM, 0)
@@ -1044,13 +1044,13 @@
 	M.druggy = min(max(0, M.druggy + 10), 15) //See above
 	..()
 	. = 1
-
+/*
 /datum/reagent/medicine/earthsblood/overdose_process(mob/living/M)
 	M.hallucination = min(max(0, M.hallucination + 10), 50)
 	M.adjustToxLoss(5 * REM, 0)
 	..()
 	. = 1
-
+*/
 /datum/reagent/medicine/haloperidol
 	name = "Haloperidol"
 	id = "haloperidol"
