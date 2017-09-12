@@ -1134,3 +1134,15 @@
 	id = "corazone"
 	description = "A medication used to treat pain, fever, and inflammation, along with heart attacks."
 	color = "#F5F5F5"
+	
+/datum/reagent/medicine/dermaline
+	name = "Dermaline"
+	id = "dermaline"
+	description = "Dermaline is the next step in burn medication. Works twice as good as kelotane and enables the body to restore even the direst heat-damaged tissue."
+	color = "#C8A5DC"
+	
+/datum/reagent/medicine/dermaline/on_mob_life(mob/living/M)
+	M.adjustFireLoss(-4*REM, 0)
+	..()
+	. = 1
+	
