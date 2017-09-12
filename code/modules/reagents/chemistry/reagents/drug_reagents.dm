@@ -366,7 +366,9 @@
 	color = "#FFFFFF"
 	
 /datum/reagent/drug/megazine/on_mob_life(mob/living/M)
-	playsound(loc, 'sound/effects/fasterthanlight.ogg', 50, 1)
+	var/high_message = pick("You feel the world is slowing down around you.", "You feel more alive than you ever have before.", "You feel like nothing can stop you.")
+	if(prob(5))
+		to_chat(M, "<span class='notice'>[high_message]</span>")
 	M.status_flags |= GOTTAGOREALLYFAST
 	if(prob(5))
 		M.emote(pick("twitch", "shiver"))
