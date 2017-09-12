@@ -32,7 +32,7 @@
 /datum/reagent/drug/nicotine
 	name = "Nicotine"
 	id = "nicotine"
-	description = "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage."
+	description = "Slightly reduces stamina damage. If overdosed it will deal toxin and oxygen damage."
 	reagent_state = LIQUID
 	color = "#60A584" // rgb: 96, 165, 132
 	addiction_threshold = 30
@@ -42,9 +42,9 @@
 	if(prob(1))
 		var/smoke_message = pick("You feel relaxed.", "You feel calmed.","You feel alert.","You feel rugged.")
 		to_chat(M, "<span class='notice'>[smoke_message]</span>")
-	M.AdjustStun(-20, 0)
-	M.AdjustKnockdown(-20, 0)
-	M.AdjustUnconscious(-20, 0)
+	//M.AdjustStun(-20, 0)
+	//M.AdjustKnockdown(-20, 0)
+	//M.AdjustUnconscious(-20, 0)
 	M.adjustStaminaLoss(-0.5*REM, 0)
 	..()
 	. = 1
@@ -56,7 +56,7 @@
 	taste_description = "mint"
 	reagent_state = LIQUID
 	color = "#80AF9C"
-
+/*
 /datum/reagent/drug/crank
 	name = "Crank"
 	id = "crank"
@@ -103,7 +103,7 @@
 	M.adjustBruteLoss(5*REM, 0)
 	..()
 	. = 1
-
+*/
 /datum/reagent/drug/krokodil
 	name = "Krokodil"
 	id = "krokodil"
@@ -154,7 +154,7 @@
 		M.adjustBruteLoss(5*REM, 0)
 	..()
 	. = 1
-
+/*
 /datum/reagent/drug/methamphetamine
 	name = "Methamphetamine"
 	id = "methamphetamine"
@@ -321,7 +321,7 @@
 		M.emote(pick("twitch","drool","moan"))
 	..()
 	. = 1
-
+*/
 /datum/reagent/drug/aranesp
 	name = "Aranesp"
 	id = "aranesp"
@@ -340,3 +340,37 @@
 		M.adjustOxyLoss(1, 0)
 	..()
 	. = 1
+
+/datum/reagent/drug/hyperzine
+	name = "Hyperzine"
+	id = "hyperzine"
+	description = "Hyperzine is a highly effective, long lasting, muscle stimulant."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	
+/datum/reagent/drug/hyperzine/on_mob_life(mob/living/M)
+	var/high_message = pick("You feel hyper.", "You feel like you need to go faster.", "You feel like you can run the world.")
+	if(prob(5))
+		to_chat(M, "<span class='notice'>[high_message]</span>")
+	M.status_flags |= GOTTAGOFAST
+	if(prob(5))
+		M.emote(pick("twitch", "shiver"))
+	..()
+	. = 1
+	
+/datum/reagent/drug/megazine
+	name = "Megazine"
+	id = "megazine"
+	description = "I'm a shooting star flying through the sky, like a tiger defying the laws of gravity."
+	reagent_state = LIQUID
+	color = "#FFFFFF"
+	
+/datum/reagent/drug/megazine/on_mob_life(mob/living/M)
+	playsound(loc, 'sound/effects/fasterthanlight.ogg', 50, 1)
+	M.status_flags |= GOTTAGOREALLYFAST
+	if(prob(5))
+		M.emote(pick("twitch", "shiver"))
+		..()
+		. = 1
+	
+		
