@@ -1,6 +1,6 @@
 /obj/item/device/assembly/mousetrap
 	name = "mousetrap"
-	desc = "A handy little spring-loaded trap for catching pesty rodents."
+	desc = "A handy little spring-loaded trap for catching pesty rodents... And Clowns"
 	icon_state = "mousetrap"
 	materials = list(MAT_METAL=100)
 	origin_tech = "combat=1;materials=2;engineering=1"
@@ -26,7 +26,7 @@
 					pulse(0)
 		update_icon()
 		if(usr)
-			playsound(usr.loc, 'sound/weapons/handcuffs.ogg', 30, 1, -3)
+			playsound(usr.loc, 'sound/effects/adminhelp.ogg', 30, 1, -3)
 
 /obj/item/device/assembly/mousetrap/describe()
 	return "The pressure switch is [armed?"primed":"safe"]."
@@ -46,7 +46,7 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		if(PIERCEIMMUNE in H.dna.species.species_traits)
-			playsound(src.loc, 'sound/effects/snap.ogg', 50, 1)
+			playsound(src.loc, 'sound/effects/adminhelp.ogg', 50, 1)
 			armed = 0
 			update_icon()
 			pulse(0)
@@ -67,7 +67,7 @@
 		var/mob/living/simple_animal/mouse/M = target
 		visible_message("<span class='boldannounce'>SPLAT!</span>")
 		M.splat()
-	playsound(src.loc, 'sound/effects/snap.ogg', 50, 1)
+	playsound(src.loc, 'sound/effects/adminhelp.ogg', 50, 1)
 	armed = 0
 	update_icon()
 	pulse(0)
@@ -88,7 +88,7 @@
 		to_chat(user, "<span class='notice'>You disarm [src].</span>")
 	armed = !armed
 	update_icon()
-	playsound(user.loc, 'sound/weapons/handcuffs.ogg', 30, 1, -3)
+	playsound(user.loc, 'sound/effects/adminhelp.ogg', 30, 1, -3)
 
 
 /obj/item/device/assembly/mousetrap/attack_hand(mob/living/carbon/human/user)

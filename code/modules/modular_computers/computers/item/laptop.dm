@@ -1,5 +1,5 @@
 /obj/item/device/modular_computer/laptop
-	name = "laptop"
+	name = "DonkPad 64"
 	desc = "A portable laptop computer."
 
 	icon = 'icons/obj/modular_laptop.dmi'
