@@ -461,14 +461,14 @@
 
 /datum/reagents/proc/check_gofast(mob/M)
 	if(ismob(M))
-		if(M.reagents.has_reagent("unholywater")||M.reagents.has_reagent("nuka_cola")||M.reagents.has_reagent("stimulants")||M.reagents.has_reagent("ephedrine"))
+		if(M.reagents.has_reagent("unholywater")||M.reagents.has_reagent("nuka_cola")||M.reagents.has_reagent("stimulants")||M.reagents.has_reagent("ephedrine")||M.reagents.has_reagent("hyperzine"))
 			return 1
 		else
 			M.status_flags &= ~GOTTAGOFAST
 
 /datum/reagents/proc/check_goreallyfast(mob/M)
 	if(ismob(M))
-		if(M.reagents.has_reagent("methamphetamine"))
+		if(M.reagents.has_reagent("megazine"))
 			return 1
 		else
 			M.status_flags &= ~GOTTAGOREALLYFAST
